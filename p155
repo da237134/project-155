@@ -1,0 +1,58 @@
+
+
+Skip navigation
+Search
+
+
+
+
+
+Avatar image
+
+
+0:07 / 1:50
+
+
+Darsh Garg / Project - 155 (Random Colors Using Dictionary) / WhiteHat Jr / Python Coding / Spyder
+
+Darsh The Codey
+176 subscribers
+
+Subscribe
+
+7
+
+
+Share
+
+Download
+
+Save
+
+426 views  Jun 8, 2022
+Code - 
+from tkinter import *
+import random
+
+root = Tk()
+root.title("Dictionary")
+root.geometry("600x400")
+
+dictionary = {"Color" : [
+                         "CadetBlue1", "CadetBlue2", "CadetBlue3", "CadetBlue4", 
+                         "DarkGoldenrod1", "DarkGoldenrod2", "DarkGoldenrod3", "DarkGoldenrod4", 
+                         "DarkOliveGreen1", "DarkOliveGreen2", "DarkOliveGreen3", "DarkOliveGreen4", 
+                         "DarkSeaGreen1", "DarkSeaGreen2", "DarkSeaGreen3", "DarkSeaGreen4", 
+                         "DeepSkyBlue2", "DeepSkyBlue3", "DeepSkyBlue4", 
+                         "DodgerBlue2", "DodgerBlue3", "DodgerBlue4", 
+                         "IndianRed1"]}
+
+def bg_color_change():
+    random_color = random.randint(0, 478)
+    print(dictionary["Color"][random_color])
+    root.configure(background = dictionary["Color"][random_color])
+
+btn = Button(root, text = "Click this Button To Change The Background Color", command = bg_color_change)
+btn.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+
+root.mainloop(
